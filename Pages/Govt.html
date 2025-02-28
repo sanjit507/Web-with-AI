@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="head.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+ 
+
+    
+
+    <title>Job Updates</title>
+
+    <style>
+        
+        /* Main Content Styles */
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            width: 300px;
+            margin: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: #fff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .job-item {
+            margin-bottom: 15px;
+        }
+
+        .job-title {
+            font-size: 2.1em;
+            color: #007bff;
+            margin: 0 0 5px;
+        }
+       
+
+        .job-details {
+            margin: 0 0 10px;
+            color: #555;
+            font-size: 1.5em;
+        }
+
+        .apply-link {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            font-size: 1.5em;
+        }
+
+        .apply-link:hover {
+            background-color: #0056b3;
+        }
+
+
+
+    </style>
+</head>
+
+
+
+<body>
+
+
+
+
+    </head>
+        <header>
+            <h2><span class="blink">♨️</span> CS Express Way</h2>
+        
+ 
+  
+    <!-- Sidebar Navigation -->
+    <div class="navbar">
+        <ul>
+            <!-- Search Menu -->
+            <li class="list">
+                <div class="search-menu">
+                    <input type="text" id="search" placeholder="Search...🔍" />
+    
+                </div>
+            </li>
+    
+            <!-- Home Link (now below Search) -->
+            <li class="list active">
+                <a href="/index.html"><span class="icon"><ion-icon name="home"></ion-icon></span> <span
+                        class="title">Home</span></a>
+            </li>
+    
+            <!-- AI Support Link -->
+            <li class="list">
+                <a href="/Pages/AI.html"><span class="icon"><ion-icon name="chatbubbles"></ion-icon></span> <span
+                        class="title">AI Support</span></a>
+            </li>
+    
+            <!-- Join More Info Link -->
+            <li class="list">
+                <a href="https://whatsapp.com/channel/0029VaQyxX3Chq6PbmfZqf3G"><span class="icon"><ion-icon
+                            name="chatbubbles"></ion-icon></span> <span class="title">Join More Info.</span></a>
+            </li>
+    
+            <!-- E-Store Link -->
+            <li class="list">
+                <a href="/Pages/Book.html"><span class="icon"><ion-icon name="analytics"></ion-icon></span> <span
+                        class="title">E-Store</span></a>
+            </li>
+    
+            <!-- Images Tools Link -->
+            <li class="list">
+                <a href="/Pages/pdf.html"><span class="icon"><ion-icon name="cog"></ion-icon></span> <span
+                        class="title">Images Tools</span></a>
+            </li>
+    
+            <!-- MCQs Link -->
+            <li class="list">
+                <a href="https://csestudy247.com/computer-science-mcqs"><span class="icon"><ion-icon
+                            name="cog"></ion-icon></span> <span class="title">MCQs</span></a>
+            </li>
+    
+            <!-- Test Series Link -->
+            <li class="list">
+                <a href="Pages/test.html"><span class="icon"><ion-icon name="cog"></ion-icon></span> <span
+                        class="title">Test Series</span></a>
+            </li>
+    
+            <!-- Project Code Link -->
+            <li class="list">
+                <a href="Pages/propaid.html"><span class="icon"><ion-icon
+                            name="help-circle-outline"></ion-icon></span> <span class="title">Project
+                        Code</span></a>
+            </li>
+    
+            <!-- Login Link -->
+            <li class="list">
+                <a href="http://localhost/Carrier%20Express/login/index.php"><span class="icon"><ion-icon
+                            name="person"></ion-icon></span> <span class="title">Login</span></a>
+            </li>
+    
+            <!-- Blog Link -->
+            <li class="list">
+                <a href="/Pages/blog.html"><span class="icon"><ion-icon name="log-out"></ion-icon></span> <span
+                        class="title">Our blog</span></a>
+            </li>
+        </ul>
+    </div>
+    
+    <script>
+        function searchFunction() {
+            let query = document.getElementById('search').value;
+            // Add logic for search, like redirecting to a search results page or showing filtered content
+            alert('Searching for: ' + query);
+        }
+    </script>
+    
+    
+    <!-- Toggle Button for Sidebar -->
+    <div class="toggle">
+        <ion-icon name="menu" class="open"></ion-icon>
+        <ion-icon name="close" class="close"></ion-icon>
+    </div>
+    </header>
+<br>
+<br>
+    <div class="announcement">
+        🤗 જ⁀➴  𝐖𝐄𝐋𝐂𝐎𝐌𝐄  👨🏻‍💻.  To : Jobs Upadates Page  ─── ⋆⋅☆⋅⋆ ──
+    </div>
+    <br>
+  
+    <br>
+
+
+    <!-- Job Cards -->
+    <div class="content">
+        <!-- DRDO Card -->
+        <div class="card" id="drdo">
+            <div class="card-header">DRDO</div>
+            <div class="card-content">
+                <div class="job-item">
+                    <h3 class="job-title">Junior Research Fellowship (JRF) at DIBER, Haldwani</h3>
+                    <p class="job-details">Walk-in interview on 17/01/2025 for JRF positions at DIBER, Haldwani.</p>
+                    <a href="/Pages/drdo.html" class="apply-link" target="_blank">Apply Now</a>
+                </div>
+
+                <div class="job-item">
+                    <h3 class="job-title">Junior Research Fellowship (JRF) at UP </h3>
+                    <p class="job-details">Walk-in interview on 25/01/2025 for JRF positions at DIBER, Haldwani.</p>
+                    <a href="https://www.drdo.gov.in/careers" class="apply-link" target="_blank">Apply Now</a>
+                </div>
+
+
+
+                <div class="job-item">
+                    <h3 class="job-title">Junior Research Fellowship (JRF) at Delhi</h3>
+                    <p class="job-details">Walk-in interview on 20/02/2025 for JRF positions at DIBER, Haldwani.</p>
+                    <a href="https://www.drdo.gov.in/careers" class="apply-link" target="_blank">Apply Now</a>
+                </div>
+
+
+
+
+            </div>
+
+
+            
+
+
+        </div>
+
+        <!-- ISRO Card -->
+
+    
+
+        <div class="card" id="isro">
+            <div class="card-header">ISRO</div>
+            <div class="card-content">
+                <div class="job-item">
+                    <h3 class="job-title">Assistant Recruitment 2023</h3>
+                    <p class="job-details">Skill Test postponed. Check official website for updates.</p>
+                    <a href="https://www.isro.gov.in/careers" class="apply-link" target="_blank">Apply Now</a>
+                </div>
+
+
+                <div class="job-item">
+                    <h3 class="job-title">Junior Research Fellowship (JRF) at DIBER, Haldwani</h3>
+                    <p class="job-details">Walk-in interview on 17/01/2025 for JRF positions at DIBER, Haldwani.</p>
+                    <a href="https://www.drdo.gov.in/careers" class="apply-link" target="_blank">Apply Now</a>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- BARC Card -->
+        <div class="card" id="barc">
+            <div class="card-header">BARC</div>
+            <div class="card-content">
+                <div class="job-item">
+                    <h3 class="job-title">Scientific Officer Recruitment 2024</h3>
+                    <p class="job-details">Applications open for Scientific Officer positions. Last date: 31/12/2024.</p>
+                    <a href="https://www.barc.gov.in/careers" class="apply-link" target="_blank">Apply Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RRB Card -->
+        <div class="card" id="rrb">
+            <div class="card-header">RRB</div>
+            <div class="card-content">
+                <div class="job-item">
+                    <h3 class="job-title">Junior Engineer Recruitment 2024</h3>
+                    <p class="job-details">Apply for JE positions across various zones. Last date: 15/01/2025.</p>
+                    <a href="https://www.rrbcdg.gov.in/" class="apply-link" target="_blank">Apply Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- NIC Card -->
+        <div class="card" id="nic">
+            <div class="card-header">NIC</div>
+            <div class="card-content">
+                <div class="job-item">
+                    <h3 class="job-title">Scientist-B Recruitment 2024</h3>
+                    <p class="job-details">598 vacancies announced for Scientific and Technical posts. Apply by 04/04/2024.</p>
+                    <a href="https://www.calicut.nielit.in/nic23/" class="apply-link" target="_blank">Apply Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- NIELIT Card -->
+        <div class="card" id="nielit">
+            <div class="card-header">NIELIT</div>
+            <div class="card-content">
+                <div class="job-item">
+                    <h3 class="job-title">Senior Resource Person (IT)</h3>
+                    <p class="job-details">Contractual position. Last date for application: 01/12/2024.</p>
+                    <a href="https://nielit.gov.in/recruitments" class="apply-link" target="_blank">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- Footer Section -->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Find us here</h3>
+            <p>Nalanda College Of Engineering Chandi,Bihar(India)</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+        <div class="box">
+            <h3>Contact us</h3>
+            <p>+123456789</p>
+            <a href="mailto:carrierexpress" class="link">csexpressway@gmail.com</a>
+        </div>
+        <div class="box">
+            <h3>Localization</h3>
+            <p> India</p>
+        </div>
+    </div>
+    <div class="credit">Designed with ❤️ <span>CS Express Way </span> | All rights reserved!</div>
+</section>
+
+
+
+
+<script src="/script.js"></script>
+
+
+</body>
+</html>

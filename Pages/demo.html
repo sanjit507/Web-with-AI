@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinite Animated Heading</title>
+  <style>
+    /* Basic styling for the body and header */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+
+    header {
+      position: relative;
+      background-color: #333;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      overflow: hidden;
+    }
+
+    /* Infinite typing animation */
+    .announcement {
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid white; /* Creates a caret effect */
+      animation: typing 8s steps(40) infinite, blink-caret 0.75s step-end infinite;
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+
+    /* Typewriter animation */
+    @keyframes typing {
+      0% {
+        width: 0;
+      }
+      50% {
+        width: 100%;
+      }
+      100% {
+        width: 0;
+      }
+    }
+
+    /* Blinking caret animation */
+    @keyframes blink-caret {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    /* Responsive styles for the announcement */
+    @media screen and (max-width: 600px) {
+      header {
+        font-size: 20px;
+      }
+      .announcement {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section with Infinite Announcement -->
+  <header>
+    <div class="announcement">
+      🚀 Carrer Express: Launch Website for All Branch of 
+      Enginering Study Resources 🎓
+    </div>
+  </header>
+
+  <div style="padding: 20px; text-align: center;">
+    <h1>Welcome to Our Educational Platform!</h1>
+    <p>Explore all the latest features and updates right here!</p>
+  </div>
+
+</body>
+</html>

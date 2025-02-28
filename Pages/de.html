@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Store</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px;
+        }
+
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .app-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.2s;
+        }
+
+        .app-card:hover {
+            transform: scale(1.05);
+        }
+
+        .app-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .app-name {
+            font-size: 16px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .app-price {
+            font-size: 14px;
+            color: #888;
+        }
+
+        .utility {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .utility .section-title {
+            color: white;
+        }
+
+        .see-all {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 15px;
+            background: white;
+            color: #1a1a2e;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .see-all:hover {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Productivity Apps</div>
+
+    <div class="section">
+        <div class="app-grid">
+            <div class="app-card">
+                <img src="/images/10833767.png" alt="Zoom" class="app-icon">
+                <div class="app-name">Zoom Workplace</div>
+                <div class="app-price">Free</div>
+            </div>
+            <div class="app-card">
+                <img src="pdfx.png" alt="PDF X" class="app-icon">
+                <div class="app-name">PDF X: PDF Editor</div>
+                <div class="app-price">Free</div>
+            </div>
+            <div class="app-card">
+                <img src="nebo.png" alt="Nebo" class="app-icon">
+                <div class="app-name">Nebo</div>
+                <div class="app-price">₹549.00</div>
+            </div>
+            <div class="app-card">
+                <img src="concepts.png" alt="Concepts" class="app-icon">
+                <div class="app-name">Concepts</div>
+                <div class="app-price">Free</div>
+            </div>
+            <div class="app-card">
+                <img src="filesapp.png" alt="Files App" class="app-icon">
+                <div class="app-name">Files App</div>
+                <div class="app-price">₹489.00</div>
+            </div>
+            <div class="app-card">
+                <img src="onecalendar.png" alt="One Calendar" class="app-icon">
+                <div class="app-name">One Calendar</div>
+                <div class="app-price">Free</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section utility">
+        <div class="section-title">Utility Apps</div>
+        <div class="app-grid">
+            <div class="app-card">
+                <div class="app-name">One Calendar</div>
+                <div class="app-price">Free</div>
+            </div>
+            <div class="app-card">
+                <div class="app-name">PDF X: PDF Editor</div>
+                <div class="app-price">Free</div>
+            </div>
+            <div class="app-card">
+                <div class="app-name">1Password</div>
+                <div class="app-price">Paid</div>
+            </div>
+            <div class="app-card">
+                <div class="app-name">Files App</div>
+                <div class="app-price">₹489.00</div>
+            </div>
+        </div>
+        <a href="#" class="see-all">See all</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Carrier Express</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000; /* Black background */
+      color: #fff; /* White text color */
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #fff; /* White text for title */
+    }
+
+    .mission-vision {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .mission, .vision {
+      width: 48%;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      color: #2980b9; /* Blue text for headings */
+    }
+
+    p {
+      font-size: 1em;
+      line-height: 1.6;
+      color: #ccc; /* Lighter gray text for paragraphs */
+      margin-bottom: 20px;
+    }
+
+    /* Image Styling */
+    .image {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Hover Effects for Images */
+    .image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .features {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .feature {
+      width: 23%;
+      text-align: center;
+    }
+
+    .feature img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .feature h3 {
+      font-size: 1.5em;
+      margin-top: 10px;
+      color: #2980b9;
+    }
+
+    @media (max-width: 768px) {
+      .mission-vision {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .mission, .vision {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .feature {
+        width: 80%;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="about-us">
+    <div class="container">
+      <h1>About Us - Carrier Express</h1>
+
+      <div class="mission-vision">
+        <div class="mission">
+            <img src="/images/66.jpg" alt="Our Mission" class="image">
+            <br>
+            <br>
+          <h2>Our Mission</h2>
+          <p>At Carrier Express, our mission is to create a comprehensive ecosystem that empowers Computer Science Engineering students. By providing access to essential resources such as syllabus, internships, job updates, top-rated courses, mentorship, and GATE materials, we aim to support your growth and enhance your skills.</p>
+          
+        </div>
+        
+        <div class="vision">
+           
+            <img src="/images/ideas-progress-vision-inspiration-design-concept.jpg" alt="Our Vision" class="image"><br><br>
+          <h2>Our Vision</h2>
+          <p>To be the leading all-in-one platform for Computer Science Engineering students, bridging the gap between academic knowledge and industry experience. We envision a future where every student has access to the right resources, mentorship, and opportunities to excel in their careers.</p>
+          
+        </div>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <img src="/images/syllabus.jpg" alt="Syllabus">
+          <h3>Syllabus</h3>
+          <p>Access the latest syllabus for various CSE subjects and academic years. Stay updated with the most relevant content to excel in your studies.</p>
+        </div>
+        <div class="feature">
+          <img src="/images/2253704.jpg" alt="Internships">
+          <h3>Internships</h3>
+          <p>Find internship opportunities with top tech companies to gain hands-on experience. Practical experience is key to succeeding in the tech industry.</p>
+        </div>
+        <div class="feature">
+          <img src="/images/20943396.jpg" alt="Job Updates">
+          <h3>Job Updates</h3>
+          <p>Stay updated with the latest job openings and career opportunities in the tech industry. Our platform helps you find the right job that fits your skills and aspirations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- Footer Section -->
+  <section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Find us here</h3>
+            <p>Nalanda College Of Engineering Chandi,Bihar(India)</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+        <div class="box">
+            <h3>Contact us</h3>
+            <p>+123456789</p>
+            <a href="mailto:carrierexpress" class="link">csexpressway@gmail.com</a>
+        </div>
+        <div class="box">
+            <h3>Localization</h3>
+            <p> India</p>
+        </div>
+    </div>
+    <div class="credit">Designed with ❤️ <span>CS Express Way </span> | All rights reserved!</div>
+</section>
+</body>
+</html>

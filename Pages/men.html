@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentorship Services - Sanjit Kumar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Sanjit Kumar - Full Stack Web Developer & Mentor</h1>
+            <p>Providing Expert Mentorship in Web Development, SEO, Machine Learning & Data Science</p>
+        </div>
+    </header>
+
+    <section class="about-me">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am Sanjit Kumar, a Full Stack Web Developer with over 2 years of experience specializing in WordPress. I also have a strong background in SEO content writing, machine learning, and data science. I offer personalized mentorship to help you succeed in these fields.</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Mentorship Services</h2>
+            <div class="service">
+                <h3>Web Development Mentorship</h3>
+                <p>Guidance on building dynamic websites with WordPress and full-stack technologies.</p>
+                <label for="duration1">Select Duration:</label>
+                <select id="duration1">
+                    <option value="60">1 hour</option>
+                    <option value="120">2 hours</option>
+                    <option value="180">3 hours</option>
+                </select>
+                <div id="price-box1">
+                    <label for="price1">Price: ₹ <span id="price1">299</span></label>
+                </div>
+                <button><a href="/Pages/booking.html">Book Now</a></button>
+            </div>
+            <div class="service">
+                <h3>SEO and Content Writing Mentorship</h3>
+                <p>Learn how to create SEO-friendly content and enhance your website's visibility.</p>
+                <label for="duration2">Select Duration:</label>
+                <select id="duration2">
+                    <option value="60">1 hour</option>
+                    <option value="120">2 hours</option>
+                    <option value="180">3 hours</option>
+                </select>
+                <div id="price-box2">
+                    <label for="price2">Price: ₹ <span id="price2">299</span></label>
+                </div>
+                <button><a href="mailto:carrierexpress@gmail.com">Book Now</a></button>
+            </div>
+            <div class="service">
+                <h3>Machine Learning & Data Science Mentorship</h3>
+                <p>Get one-on-one mentorship on machine learning algorithms, data analysis, and more.</p>
+                <label for="duration3">Select Duration:</label>
+                <select id="duration3">
+                    <option value="60">1 hour</option>
+                    <option value="120">2 hours</option>
+                    <option value="180">3 hours</option>
+                </select>
+                <div id="price-box3">
+                    <label for="price3">Price: ₹ <span id="price3">299</span></label>
+                </div>
+                <button><a href="mailto:carrierexpress@gmail.com">Book Now</a></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What People Say</h2>
+            <div class="testimonial">
+                <p><strong>Krishnam Vats:</strong> "Sanjit has helped me a lot in my journey to becoming a full-stack developer. His mentorship is top-notch!"</p>
+            </div>
+            <div class="testimonial">
+                <p><strong>Soumen Khatua:</strong> "The guidance I received from Sanjit was incredible. He made complex topics easy to understand!"</p>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer Section -->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Find us here</h3>
+            <p>Nalanda College Of Engineering Chandi, Bihar (India)</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+        <div class="box">
+            <h3>Contact us</h3>
+            <p>+123456789</p>
+            <a href="mailto:carrierexpress" class="link">carrierexpress@gmail.com</a>
+        </div>
+        <div class="box">
+            <h3>Localization</h3>
+            <p>India</p>
+        </div>
+    </div>
+    <div class="credit">Created by <span>Carrier Express</span> | All rights reserved!</div>
+</section>
+
+<script>
+    // Function to update price based on selected duration
+    function updatePrice(selectElement, priceElement, priceData) {
+        const duration = selectElement.value;
+        const price = priceData[duration];
+        priceElement.textContent = price;
+    }
+
+    // Price data for different durations
+    const priceData = {
+        "60": 299,  // 1 hour
+        "120": 499, // 2 hours
+        "180": 699  // 3 hours
+    };
+
+    // Event listeners for all select elements
+    document.getElementById('duration1').addEventListener('change', function() {
+        updatePrice(this, document.getElementById('price1'), priceData);
+    });
+
+    document.getElementById('duration2').addEventListener('change', function() {
+        updatePrice(this, document.getElementById('price2'), priceData);
+    });
+
+    document.getElementById('duration3').addEventListener('change', function() {
+        updatePrice(this, document.getElementById('price3'), priceData);
+    });
+</script>
+
+<!-- Footer Section -->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Find us here</h3>
+            <p>Nalanda College Of Engineering Chandi,Bihar(India)</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+        <div class="box">
+            <h3>Contact us</h3>
+            <p>+123456789</p>
+            <a href="mailto:carrierexpress" class="link">csexpressway@gmail.com</a>
+        </div>
+        <div class="box">
+            <h3>Localization</h3>
+            <p> India</p>
+        </div>
+    </div>
+    <div class="credit">Created by <span>CS Express Way </span> | All rights reserved!</div>
+</section>
+
+</body>
+</html>

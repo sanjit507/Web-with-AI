@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Computer Science Exams & Job Opportunities</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        section {
+            padding: 40px 0;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .exam-list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .exam-card {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .exam-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .exam-card p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #0066cc;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .countdown {
+            background-color: #ffcc00;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .exam-category {
+            background-color: #ffffff;
+            padding: 40px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-category h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .exam-category p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .exam-card button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff6600;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+
+        .exam-card button:hover {
+            background-color: #e65c00;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Computer Science Exams & Job Opportunities</h1>
+            <p>Prepare for GATE, DRDO, ISRO, Private Companies, and more!</p>
+        </div>
+    </header>
+
+    <section class="intro">
+        <div class="container">
+            <h2>About the Platform</h2>
+            <p>This platform offers study materials, test series, job updates, and information about various exams in the Computer Science field. Whether you're preparing for GATE, DRDO, ISRO, or applying to top private companies like TCS, we provide everything you need to excel!</p>
+        </div>
+    </section>
+
+    <section class="countdown">
+        <div class="container">
+            <p>Next Test Series Starts in: <span id="countdown-timer"></span></p>
+        </div>
+    </section>
+
+    <!-- Exam Categories Section -->
+    <section class="exam-category">
+        <div class="container">
+            <h3>Popular Exams for Computer Science Aspirants</h3>
+            <div class="exam-list">
+                <div class="exam-card">
+                    <h3>GATE Exam</h3>
+                    <p>The Graduate Aptitude Test in Engineering (GATE) is a highly competitive exam for admissions to M.Tech and other postgraduate programs in top institutes.</p>
+                    <button>Start Preparing</button>
+                </div>
+                <div class="exam-card">
+                    <h3>DRDO Exam</h3>
+                    <p>DRDO conducts exams for recruitment of scientists and engineers in various technical fields. Explore the best preparation materials here.</p>
+                    <button>Start Preparing</button>
+                </div>
+                <div class="exam-card">
+                    <h3>ISRO Exam</h3>
+                    <p>The Indian Space Research Organisation (ISRO) conducts exams for recruiting engineers in various scientific and technical roles.</p>
+                    <button>Start Preparing</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Private Companies Section -->
+    <section class="exam-category">
+        <div class="container">
+            <h3>Private Company Exams</h3>
+            <div class="exam-list">
+                <div class="exam-card">
+                    <h3>TCS</h3>
+                    <p>Tata Consultancy Services (TCS) offers recruitment exams for various roles, including software engineering and IT services. Get the latest updates and preparation materials here.</p>
+                    <button>Start Preparing</button>
+                </div>
+                <div class="exam-card">
+                    <h3>Infosys</h3>
+                    <p>Infosys conducts exams for hiring software engineers and other IT professionals. Prepare with the best resources available.</p>
+                    <button>Start Preparing</button>
+                </div>
+                <div class="exam-card">
+                    <h3>Wipro</h3>
+                    <p>Wipro recruitment exams test for roles in software development and IT consulting. Check out the preparation tips and resources.</p>
+                    <button>Start Preparing</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial">
+        <div class="container">
+            <h3>What Our Users Are Saying</h3>
+            <p>"The platform helped me tremendously in preparing for GATE. The study material and test series were very helpful in boosting my confidence." – Ravi Patel</p>
+            <p>"I used the platform to prepare for DRDO exams. The resources were very precise, and the test series simulated the real exam pattern." – Anjali Verma</p>
+        </div>
+    </section>
+
+    <section class="registration-form">
+        <div class="container">
+            <h2>Register for the Test Series</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Register Now</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+       
+
+<!-- Footer Section -->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Find us here</h3>
+            <p>Nalanda College Of Engineering Chandi,Bihar(India)</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+        <div class="box">
+            <h3>Contact us</h3>
+            <p>+123456789</p>
+            <a href="mailto:carrierexpress" class="link">csexpressway@gmail.com</a>
+        </div>
+        <div class="box">
+            <h3>Localization</h3>
+            <p> India</p>
+        </div>
+    </div>
+    <div class="credit">Designed with ❤️Created by <span>CS Express Way </span> | All rights reserved!</div>
+</section>
+
+
+    </footer>
+
+    <script>
+        // Countdown Timer
+        const countdownDate = new Date("Jan 1, 2025 00:00:00").getTime();
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown-timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("countdown-timer").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>

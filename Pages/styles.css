@@ -1,0 +1,1696 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section with Background Video */
+.video-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.background-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+/* Sidebar Styles */
+.navbar {
+    position: fixed;
+    top: 4rem; /* Slightly adjusted for better alignment */
+    left: 0;
+    bottom: 0;
+    width: 5rem; /* Collapsed width */
+    background: linear-gradient(145deg, #2c3e50, #34495e); /* Gradient background */
+    color: white;
+    transition: width 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    padding-top: 2rem;
+    border-radius: 0 1rem 1rem 0;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 1000;
+  }
+  
+  .navbar.active {
+    width: 18rem; /* Expanded width */
+    box-shadow: 6px 0 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(145deg, #34495e, #2c3e50); /* Subtle color switch */
+  }
+  
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar ul li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.2rem;
+    margin: 0.5rem 0;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+    border-radius: 0 2rem 2rem 0;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .navbar ul li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 0 2rem 2rem 0;
+  }
+  
+  .navbar ul li:hover::before {
+    transform: scaleY(1);
+  }
+  
+  .navbar ul li:hover {
+    background-color: #1abc9c;
+    transform: translateX(10px); /* Slide effect */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 1rem;
+  }
+  
+  .navbar ul li .icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #ffffff;
+    transition: transform 0.3s, color 0.3s ease-in-out;
+  }
+  
+  .navbar ul li:hover .icon {
+    transform: scale(1.2);
+    color: white;
+  }
+  
+  .navbar ul li .title {
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateX(-15px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    white-space: nowrap;
+  }
+  
+  .navbar.active ul li .title {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Toggle Button Styles */
+  .toggle {
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1100;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .toggle:hover {
+    transform: rotate(10deg); /* Subtle rotation on hover */
+    background-color: #f8f9fa;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .toggle ion-icon {
+    font-size: 2rem;
+  }
+  
+  .toggle .close {
+    display: none;
+  }
+  
+  .navbar.active ~ .toggle .close {
+    display: block;
+  }
+  
+  .toggle .menu {
+    display: block;
+  }
+  
+  .navbar.active ~ .toggle .menu {
+    display: none;
+  }
+  
+  /* Animation for Sidebar Items */
+  @keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+  
+  .navbar.active ul li {
+    animation: fadeInSlide 0.6s ease-in-out;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar {
+        width: 4rem;
+    }
+  
+    .navbar.active {
+        width: 15rem;
+    }
+  
+    .toggle {
+        top: 1rem;
+        left: 1rem;
+        width: 4rem;
+        height: 4rem;
+    }
+  
+    .navbar ul li {
+        padding: 0.9rem;
+    }
+  
+    .navbar ul li .title {
+        font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar {
+        width: 3.5rem;
+    }
+  
+    .navbar.active {
+        width: 12rem;
+    }
+  
+    .toggle {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+  
+    .navbar ul li {
+        padding: 0.8rem;
+    }
+  
+    .navbar ul li .title {
+        font-size: 0.9rem;
+    }
+  }
+  
+  
+  
+
+
+/* Footer Styles */
+.footer {
+    padding: 4rem 2rem;               /* Add padding inside the footer */
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Add gradient background */
+    color: white;                     /* Text color */
+    text-align: center;               /* Center-align the text */
+    width: 100%;                      /* Ensure the footer spans the full width */
+    position: relative;               /* Position relative for inner elements */
+    box-sizing: border-box;           /* Prevent overflow */
+    margin: 0;                        /* Remove default margin */
+    display: block;                   /* Ensure it behaves like a block element */
+    border-top: 4px solid #3498db;    /* Add a stylish top border */
+    font-family: 'Poppins', sans-serif; /* Add a modern font */
+    overflow: hidden;                 /* Prevent any overflow issues */
+  }
+  
+  /* Footer Decorative Elements */
+  .footer::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 5px;
+    background: #3498db;
+    border-radius: 50%;
+    opacity: 0.8;
+  }
+  
+  /* Footer Box Container */
+  .footer .box-container {
+    display: flex;
+    justify-content: space-between;   /* Distribute space evenly */
+    width: 100%;                      /* Ensure container takes full width */
+    max-width: 1300px;                /* Increase max width */
+    margin: 0 auto;                   /* Center the container horizontally */
+    gap: 2rem;                        /* Space between the boxes */
+    flex-wrap: wrap;                  /* Allow wrapping of content */
+    box-sizing: border-box;           /* Prevent overflow */
+    align-items: flex-start;          /* Align items at the top */
+    animation: fadeInUp 1s ease-in-out; /* Add entrance animation */
+  }
+  
+  /* Footer Box Styling */
+  .footer .box {
+    width: 28%;                       /* Slightly reduce width for better spacing */
+    padding: 20px;                    /* Padding inside each box */
+    box-sizing: border-box;           /* Prevent overflow */
+    margin-bottom: 2rem;              /* Margin below the boxes */
+    background: rgba(52, 73, 94, 0.9);/* Semi-transparent background */
+    border-radius: 12px;              /* Increase corner rounding */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .footer .box:hover {
+    transform: translateY(-5px);      /* Slightly lift on hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); /* Deeper shadow on hover */
+  }
+  
+  /* Footer Box Title Styling */
+  .footer .box h3 {
+    font-size: 1.8rem;                /* Slightly larger title size */
+    color: #ecf0f1;                   /* Light color for the title */
+    margin-bottom: 1.2rem;            /* Increase space below the title */
+    border-bottom: 3px solid #3498db; /* Thicker underline for title */
+    padding-bottom: 0.6rem;
+    text-align: left;  
+    margin-left: 20px;               /* Align titles to the left */
+    text-transform: uppercase;        /* Capitalize titles */
+  }
+  
+  /* Footer Text Styling */
+  .footer .box p {
+    font-size: 1rem;                  /* Text size */
+    line-height: 1.8;                 /* Improve readability */
+    color: #bdc3c7;                   /* Subtle text color */
+    margin: 0.5rem 0;                 /* Space between paragraphs */
+    text-align: left; 
+    margin-left: 20px;                /* Align text to the left */
+  }
+  
+  /* Social Media Links Styling */
+  .footer .share {
+    margin-top: 2rem;
+  }
+  
+  .footer .share a {
+    margin: 0 1rem;                   /* Horizontal space between icons */
+    font-size: 2rem;                  /* Icon size */
+    color: white;                     /* Icon color */
+    text-decoration: none;            /* Remove underline */
+    display: inline-block;            /* Block layout for better hover effects */
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .footer .share a:hover {
+    color: #e67e22;                   /* Change color on hover */
+    transform: scale(1.2);            /* Increase size on hover */
+  }
+  
+  /* Footer Links Styling */
+  .footer .link {
+    text-decoration: none;            /* Remove link underline */
+    color: #3498db;                   /* Link color */
+    font-weight: bold;                /* Emphasize links */
+    transition: color 0.3s ease;      /* Smooth hover effect */
+  }
+  
+  .footer .link:hover {
+    color: #1abc9c;                   /* Change color on hover */
+    text-decoration: underline;       /* Add underline on hover */
+  }
+  
+  /* Newsletter Subscription */
+  .footer .newsletter {
+    margin-top: 2rem;
+    text-align: left;
+  }
+  
+  .footer .newsletter input[type="email"] {
+    width: 75%;                       /* Input field width */
+    padding: 12px;                    /* Increased padding */
+    border: 2px solid #3498db;        /* Border styling */
+    border-radius: 6px;               /* Rounded corners */
+    outline: none;                    /* Remove outline */
+    font-size: 1rem;                  /* Font size */
+    margin-right: 1rem;               /* Space after input */
+  }
+  
+  .footer .newsletter button {
+    padding: 12px 24px;               /* Increased button padding */
+    background-color: #3498db;        /* Button background */
+    color: white;                     /* Button text color */
+    border: none;                     /* Remove border */
+    border-radius: 6px;               /* Rounded corners */
+    cursor: pointer;                  /* Pointer cursor */
+    font-size: 1rem;                  /* Font size */
+    font-weight: bold;                /* Emphasize button text */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .footer .newsletter button:hover {
+    background-color: #1abc9c;        /* Change background on hover */
+    transform: translateY(-2px);      /* Slight lift on hover */
+  }
+  
+  /* Credit Styling */
+  .footer .credit {
+    margin-top: 3rem;  
+    font-size: 0.9rem;  
+    text-align: center;  
+    width: 100%;  
+    padding-top: 1rem;
+    border-top: 1px solid #bdc3c7;    /* Add a top border */
+    color: #bdc3c7;                   /* Subtle text color */
+    letter-spacing: 1px;              /* Space out letters slightly */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 1024px) {
+    .footer .box-container {
+        gap: 1.5rem;                  /* Reduce gap between boxes */
+    }
+  
+    .footer .box {
+        width: 45%;                   /* Adjust width for medium screens */
+    }
+  
+    .footer .newsletter input[type="email"] {
+        width: 70%;                   /* Adjust input width */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer .box-container {
+        flex-direction: column;       /* Stack the boxes vertically */
+        align-items: center;          /* Center-align the boxes */
+    }
+  
+    .footer .box {
+        width: 90%;                   /* Increase box width for small screens */
+    }
+  
+    .footer .newsletter input[type="email"] {
+        width: 100%;                  /* Full width for input on smaller screens */
+        margin-bottom: 1rem;          /* Add spacing below input */
+    }
+  
+    .footer .newsletter button {
+        width: 100%;                  /* Full width for button */
+    }
+  }
+  
+  /* Keyframe Animation */
+  @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+/* Book Section */
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+
+
+   
+}
+
+/* Default Style for Book Cards */
+.book-card {
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: #0f74ae; /* Default color */
+    transition: background-color 0.5s ease, transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Effect for Background Color Change */
+.book-card:hover {
+    background-color: #88d3ce; /* New color on hover */
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(12, 178, 170, 0.3);
+}
+
+
+.book-image {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.book-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+    
+
+}
+
+.book-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 5px 0 10px;
+}
+
+.offer {
+    font-size: 0.8rem;
+    color: #d32f2f;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #6e45e2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #88d3ce;
+    transform: translateY(-3px);
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+.btn:hover::after {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+}
+
+
+
+/* Keyframe Animation for Background Color and Border */
+@keyframes cardColorChange {
+    0% {
+        background-color: #ffffff; /* Initial background color */
+        border: 2px solid #6e45e2; /* Initial border color */
+    }
+    50% {
+        background-color: #f0f4f8; /* Lighter background color */
+        border: 2px solid #88d3ce; /* Border color changes */
+    }
+    100% {
+        background-color: #ffffff; /* Back to original background color */
+        border: 2px solid #6e45e2; /* Back to initial border color */
+    }
+}
+
+/* Default Style for Book Cards */
+.book-card {
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff; /* Default background color */
+    border: 2px solid #6e45e2; /* Initial border color */
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: cardColorChange 5s infinite; /* Apply the keyframe animation */
+}
+
+/* Hover Effect for Book Card */
+.book-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+}
+
+
+
+
+
+
+
+/* Laptops Section */
+.laptop-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.laptop-card {
+    width: 250px;  /* Increase the width of the card */
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 20px;  /* Increased padding for a bigger card */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* More prominent shadow */
+    transition: transform 0.3s ease-in-out;
+}
+
+.laptop-card:hover {
+    transform: translateY(-10px);  /* Hover effect to lift the card */
+}
+
+.laptop-image {
+    width: 100%;
+    height: 200px;  /* Increase the height of the image */
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.laptop-card h3 {
+    font-size: 1.2rem;  /* Larger font size for the title */
+    margin: 15px 0;
+}
+
+.laptop-card p {
+    font-size: 1rem;  /* Increase the font size */
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.offer {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.laptop-card .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.laptop-card .btn:hover {
+    background-color: #45a049;
+}
+
+h1 {
+    font-size: 2.5em; /* Large font size */
+    color: #2c3e50; /* Dark gray color */
+    margin-left: 20px; /* Left margin */
+    padding: 10px 0; /* Padding for top and bottom */
+    text-align: center; /* Align text to the left */
+    font-family: 'Arial', sans-serif; /* Use Arial font */
+    letter-spacing: 1px; /* Space between letters */
+    border-bottom: 2px solid #3498db; /* Blue bottom border */
+    max-width: 100%; /* Ensure it doesn't overflow */
+    
+    /* Animation */
+    opacity: 0; /* Start with 0 opacity */
+    transform: translateY(20px); /* Start 20px below its original position */
+    animation: fadeInUp 1s ease-out forwards; /* Apply animation */
+    transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for hover effects */
+
+    /* Add text-shadow */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+/* Define the fadeInUp animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start from 20px below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+/* Hover Effects */
+h1:hover {
+    color: #3498db; /* Change text color on hover */
+    transform: translateY(-5px); /* Slightly move the text up on hover */
+    border-bottom: 2px solid #e74c3c; /* Change the border color on hover */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Additions to existing CSS */
+/* Search Bar */
+.search-bar {
+    margin: 1em auto;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input {
+    padding: 0.5em;
+    font-size: 1em;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 0.5em 1em;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* Pricing Section */
+.pricing {
+    background: #f4f4f4;
+    padding: 2em 0;
+   
+}
+
+
+
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #100505;
+    background-color: #f7f7f7;  /* Soft background color */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: linear-gradient(45deg, rgb(255, 255, 255), rgb(0, 0, 0));  /* Gradient from turquoise to yellow */
+    color: white;
+    padding: 1.5em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 2em;
+    color: white;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: rgb(14, 12, 9);  /* Highlight color matches gradient */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(11, 10, 8));  /* Orange to Yellow gradient */
+    color: white;
+    text-align: center;
+    padding: 4em 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero h2 {
+    font-size: 3.5em;
+    margin-bottom: 1em;
+}
+
+.hero .btn {
+    background: rgb(255, 255, 255);  /* Matching accent color */
+    color: #282c34;
+    padding: 1em 2em;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    margin-top: 1.5em;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero .btn:hover {
+    background: white;
+    transform: scale(1.1);
+}
+
+/* Courses Section */
+.courses {
+    padding: 3em 0;
+    background: #ffffff;  /* Soft white background for clean design */
+    text-align: center;
+}
+
+.courses h2 {
+    font-size: 2.5em;
+    margin-bottom: 1.5em;
+    color: rgb(34, 193, 195);  /* Turquoise accent */
+}
+
+.course-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.course-card {
+    background: hsl(208, 100%, 97%);  /* Soft light blue card background */
+    border-radius: 10px;
+    overflow: hidden;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: slideIn 1.2s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-12px);  /* Slight upward lift effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);  /* Darker shadow on hover */
+}
+
+.course-image {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+
+.course-content {
+    padding: 1em;
+}
+
+.course-content h3 {
+    margin: 0.5em 0;
+    font-size: 1.5em;
+    color: rgb(9, 10, 10);  /* Matching course titles with turquoise */
+}
+
+.course-content p {
+    font-size: 1em;
+    color: #666;
+}
+
+
+.course-content .original-price {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    background: rgb(34, 193, 195);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: rgb(18, 172, 131);
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Offer Price with Keyframe Animation */
+.course-content .offer {
+    background-color: rgb(0, 0, 0);  /* Orange background */
+    color: white;
+    font-weight: bold;
+    padding: 0.5em;
+    border-radius: 5px;
+    margin: 0.5em 0;
+    display: inline-block;
+    border: 3px solid rgb(255, 87, 34);  /* Initial border color matching background */
+    animation: borderAnimation 2s infinite alternate;  /* Animation on border color */
+}
+
+/* Original price (strikethrough) */
+.course-content .original-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 10px;
+}
+
+/* Keyframe animation for border color */
+@keyframes borderAnimation {
+    0% {
+        border-color: rgb(34, 52, 255);  /* Start with the original orange */
+    }
+    50% {
+        border-color: rgb(34, 193, 195);  /* Midway change to turquoise */
+    }
+    100% {
+        border-color: rgb(253, 187, 45);  /* End with yellow */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Intership CSS CODE */
+
+
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.intro h2 {
+    font-size: 5rem;
+    color: #333; /* Adjusted for better contrast */
+    animation: fadeIn 1.5s ease-out; /* Added fade-in animation */
+}
+
+
+
+.intro .btn:hover {
+    background-color: #45a049;
+    transform: translateY(-5px); /* Hover effect - slight lift */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Internships Page */
+.internships {
+    padding: 50px 20px;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    animation: slideUp 1s ease-out; /* Added slide-up animation */
+}
+
+.internship-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.internship {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    animation: fadeIn 1s ease-out; /* Added fade-in effect */
+}
+
+.internship h3 {
+    color: #4CAF50;
+}
+
+.internship:hover {
+    transform: translateY(-10px); /* Hover effect - slight lift */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.internship .btn {
+    background-color: #007bff;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.internship .btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px); /* Hover effect - slight lift */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+/* Syllabus CSS Code */
+
+
+/* Main Content */
+.main-content {
+    padding: 20px 0;
+}
+
+.syllabus-section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.syllabus-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Course List Styles */
+.course-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.course-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.course-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.course-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.course-card li {
+    margin: 5px 0;
+}
+
+.course-card a {
+    text-decoration: none;
+    color: #0078d7;
+    font-weight: bold;
+}
+
+.course-card a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+h2, h3 {
+    color: #2C3E50;
+    margin-bottom: 10px;
+}
+
+p, ul {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #2980B9;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #1A5276;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #2980B9;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e1e9f1;
+}
+
+/* Button Style for Download Links */
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2980B9;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+/* JOB CSS Code */
+
+
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* Header Section */
+.header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+/* Main Content */
+.main-content {
+    padding: 40px 0;
+}
+
+/* Job and Internship Sections */
+.job-updates-section, .internship-section {
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    border-radius: 8px;
+}
+
+.job-updates-section h2, .internship-section h2 {
+    font-size: 2.2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+/* Job and Internship Lists */
+.job-list, .internship-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.job-card, .internship-card {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card h3, .internship-card h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.job-card p, .internship-card p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.job-card .apply-btn, .internship-card .apply-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+    border: none;
+}
+
+.job-card .apply-btn:hover, .internship-card .apply-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Hover effect on Job and Internship Cards */
+.job-card:hover, .internship-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.box-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 30%;
+}
+
+.box h3 {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.box p, .box .link {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.share a {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #bbb;
+    transition: color 0.3s;
+}
+
+.share a:hover {
+    color: #fff;
+}
+
+.link {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+    .job-card, .internship-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .job-list, .internship-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .job-card, .internship-card {
+        width: 80%;
+        margin: 15px 0;
+    }
+
+    .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .job-card, .internship-card {
+        width: 100%;
+    }
+}
+
+
+/* MEN CSS */
+
+
+/* Header section */
+header {
+    background-color: #2C3E50;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* About me section */
+.about-me {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.about-me p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Services section */
+.services {
+    background-color: #ecf0f1;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.service {
+    margin-bottom: 30px;
+}
+
+.service h3 {
+    font-size: 24px;
+    color: #3498db;
+}
+
+.service p {
+    font-size: 18px;
+}
+
+/* Booking section */
+.booking-section {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.booking-box {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.booking-box select {
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#price-box {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Testimonials section */
+.testimonials {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.testimonial {
+    background-color: #ecf0f1;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.testimonial p {
+    font-size: 18px;
+    font-style: italic;
+}
+
+
+/* Booking CSS */
+
+/* Profile Section */
+.profile {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+}
+
+.profile h2 {
+    margin-top: 20px;
+}
+
+/* Booking Section */
+.booking {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.booking h3 {
+    font-size: 28px;
+}
+
+.duration-selection,
+.time-selection {
+    margin: 20px 0;
+}
+
+#updated-price {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Footer */
+footer {
+    background-color: #2C3E50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 18px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Add shadow and animation to the image */
+.shadow-animate {
+    width: 200px; /* Set the width of the image */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 10px; /* Optional: makes the corners rounded */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    animation: float 3s ease-in-out infinite; /* Animation effect */
+    transition: box-shadow 0.3s ease-in-out; /* Transition effect for hover */
+}
+
+/* Hover effect to increase shadow and give a lift effect */
+.shadow-animate:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Keyframes for floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Float up */
+    }
+    100% {
+        transform: translateY(0); /* Return to original position */
+    }
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 30px;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+button a:hover {
+    background-color: #45a049;
+}
+
+/* Service Section Styles */
+.mentorship-services {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.service {
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service h3 {
+    color: #4CAF50;
+}
+
+.service p {
+    color: #555;
+    font-size: 16px;
+}
+
+
+
+
+.exam-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.exam-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.exam-card a:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #f6f9fc, #e8e8e8);
+    color: #1a1a2e;
+}

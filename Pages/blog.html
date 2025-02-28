@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="head.css">
+    <title>Blog</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+
+        /* Basic Reset and Box-sizing */
+        * {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            text-decoration: none;
+            transition: all .2s linear;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+            background-color: #000000;
+        }
+
+        section {
+            padding: 5rem 10%;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 3.5rem;
+            text-transform: capitalize;
+            color: #444;
+        }
+
+        .blog .box-container {
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+            gap: 2rem;
+        }
+
+        .blog .box-container .box:hover .image img {
+            transform: scale(1.1);
+        }
+
+        .blog .box-container .box.shadow {
+            box-shadow: 0px 18px 39.1px 6.9px rgba(224, 241, 255, 0.34) !important;
+        }
+
+        .blog .box-container .box .image {
+            height: 25rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .blog .box-container .box .image img {
+            height: 100%;
+            width: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+
+        .blog .box-container .box .image h3 {
+            background-color: #fff;
+            color: #444;
+            position: absolute;
+            top: 2rem;
+            left: 1rem;
+            padding: .5rem 1.5rem;
+            font-size: 1.5rem;
+            border-radius: 15px;
+        }
+
+        .blog .box-container .box .image h3 i {
+            color: #bd18b4;
+        }
+
+        .blog .box-container .box .content {
+            padding: 2rem;
+            background-color: #fff;
+        }
+
+        .blog .box-container .box .content h3 {
+            font-size: 2rem;
+        }
+
+        .blog .box-container .box .content p {
+            font-size: 1.5rem;
+            padding: 1rem 0;
+            line-height: 2;
+            color: #777;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.8rem 2rem;
+            font-size: 1.2rem;
+            border: 0.1rem solid #bd18b4;
+            background: #ffeeff;
+            color: #bd18b4;
+            cursor: pointer;
+            text-transform: capitalize;
+        }
+
+        .btn:hover {
+            background: #bd18b4;
+            color: #ffeeff;
+        }
+    </style>
+
+
+
+
+    <header>
+        <h2><span class="blink">♨️</span> CS Express Way</h2>
+        <div class="butterfly">  
+             <♡>👨🏻‍💻♨ ⚛</> </div>
+
+<!-- Sidebar Navigation -->
+<div class="navbar">
+    <ul>
+        <!-- Search Menu -->
+        <li class="list">
+            <div class="search-menu">
+                <input type="text" id="search" placeholder="Search...🔍" />
+
+            </div>
+        </li>
+
+        <!-- Home Link (now below Search) -->
+        <li class="list active">
+            <a href="/index.html"><span class="icon"><ion-icon name="home"></ion-icon></span> <span
+                    class="title">Home</span></a>
+        </li>
+
+        <!-- AI Support Link -->
+        <li class="list">
+            <a href="/Pages/AI.html"><span class="icon"><ion-icon name="chatbubbles"></ion-icon></span> <span
+                    class="title">AI Support</span></a>
+        </li>
+
+        <!-- Join More Info Link -->
+        <li class="list">
+            <a href="https://whatsapp.com/channel/0029VaQyxX3Chq6PbmfZqf3G"><span class="icon"><ion-icon
+                        name="chatbubbles"></ion-icon></span> <span class="title">Join More Info.</span></a>
+        </li>
+
+        <!-- E-Store Link -->
+        <li class="list">
+            <a href="/Pages/Book.html"><span class="icon"><ion-icon name="analytics"></ion-icon></span> <span
+                    class="title">E-Store</span></a>
+        </li>
+
+        <!-- Images Tools Link -->
+        <li class="list">
+            <a href="/Pages/pdf.html"><span class="icon"><ion-icon name="cog"></ion-icon></span> <span
+                    class="title">Images Tools</span></a>
+        </li>
+
+        <!-- MCQs Link -->
+        <li class="list">
+            <a href="https://csestudy247.com/computer-science-mcqs"><span class="icon"><ion-icon
+                        name="cog"></ion-icon></span> <span class="title">MCQs</span></a>
+        </li>
+
+        <!-- Test Series Link -->
+        <li class="list">
+            <a href="Pages/test.html"><span class="icon"><ion-icon name="cog"></ion-icon></span> <span
+                    class="title">Test Series</span></a>
+        </li>
+
+        <!-- Project Code Link -->
+        <li class="list">
+            <a href="Pages/propaid.html"><span class="icon"><ion-icon
+                        name="help-circle-outline"></ion-icon></span> <span class="title">Project
+                    Code</span></a>
+        </li>
+
+        <!-- Login Link -->
+        <li class="list">
+            <a href="http://localhost/Carrier%20Express/login/index.php"><span class="icon"><ion-icon
+                        name="person"></ion-icon></span> <span class="title">Login</span></a>
+        </li>
+
+        <!-- Blog Link -->
+        <li class="list">
+            <a href="/Pages/blog.html"><span class="icon"><ion-icon name="log-out"></ion-icon></span> <span
+                    class="title">Our blog</span></a>
+        </li>
+    </ul>
+</div>
+
+<script>
+    function searchFunction() {
+        let query = document.getElementById('search').value;
+        // Add logic for search, like redirecting to a search results page or showing filtered content
+        alert('Searching for: ' + query);
+    }
+</script>
+
+
+<!-- Toggle Button for Sidebar -->
+<div class="toggle">
+    <ion-icon name="menu" class="open"></ion-icon>
+    <ion-icon name="close" class="close"></ion-icon>
+</div>
+</header>
+
+
+
+    <section class="blog">
+        <h1 class="heading">our blog</h1>
+
+        <div class="box-container">
+
+            <div class="box shadow">
+                <div class="image">
+                    <img src="/images/bh.jpg" alt="">
+                    <h3><i class="fas fa-heart"></i> 82</h3>
+                </div>
+                <div class="content">
+                    <h3>Do You Want Indian OS  </h3>
+                    <p>  A Linux-based mobile OS developed by IIT Madras and JandK Operations Private Limited (JandKops) </p>
+                    <a href="/Pages/blog2.html" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="box shadow">
+                <div class="image">
+                    <img src="/images/WIN.jpg" alt="">
+                    <h3><i class="fas fa-heart"></i> 77</h3>
+                </div>
+                <div class="content">
+                    <h3>How to Install Microsoft Windows</h3>
+                    <p> If you're installing Windows 10 for the first time, you'll need to enter a valid Windows 10 product key or buy a full version of Windows 10 during setup  </p>
+                    <a href="/Pages/blog1.html" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="box shadow">
+                <div class="image">
+                    <img src="/images/blog_3.jpg" alt="">
+                    <h3><i class="fas fa-heart"></i> 52</h3>
+                </div>
+                <div class="content">
+                    <h3>Do You Want Your Blog To Stand Alone Or Support Another Site?</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="box shadow">
+                <div class="image">
+                    <img src="/images/blog_4.jpg" alt="">
+                    <h3><i class="fas fa-heart"></i> 80</h3>
+                </div>
+                <div class="content">
+                    <h3>Do You Want Your Blog To Stand Alone Or Support Another Site?</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="box shadow">
+                <div class="image">
+                    <img src="/images/blog_5.jpg" alt="">
+                    <h3><i class="fas fa-heart"></i> 50</h3>
+                </div>
+                <div class="content">
+                    <h3>Do You Want Your Blog To Stand Alone Or Support Another Site?</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="box shadow">
+                <div class="image">
+                    <img src="/images/blog_6.jpg" alt="">
+                    <h3><i class="fas fa-heart"></i> 40</h3>
+                </div>
+                <div class="content">
+                    <h3>Do You Want Your Blog To Stand Alone Or Support Another Site?</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, odit!</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="/script.js"></script>
+<!-- Footer Section -->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Find us here</h3>
+            <p>Nalanda College Of Engineering Chandi,Bihar(India)</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+        <div class="box">
+            <h3>Contact us</h3>
+            <p>+123456789</p>
+            <a href="mailto:carrierexpress" class="link">csexpressway@gmail.com</a>
+        </div>
+        <div class="box">
+            <h3>Localization</h3>
+            <p> India</p>
+        </div>
+    </div>
+    <div class="credit">Designed with ❤️ <span>CS Express Way </span> | All rights reserved!</div>
+</section>
+
+</body>
+</html>

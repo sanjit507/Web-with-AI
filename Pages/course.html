@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduCourses - Learn Anytime</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <br> <br>
+            <h1 class="logo"> Welcome To Course Section of Career Express </h1>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Empower Your Learning Journey</h2>
+            <p>Choose from a wide range of courses and take advantage of our special discounts!</p>
+            <a href="https://course-recommendation-systems.onrender.com" class="btn">Try To ֎🇦🇮 Course
+                Recommendation</a>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <h2>Our Top Courses</h2>
+            <div class="course-grid">
+                <!-- Course Card Example -->
+                <div class="course-card">
+                    <div class="course-image" style="background-image: url('/images/web.jpg');"></div>
+                    <div class="course-content">
+                        <h3>Full Stack Development</h3>
+                        <p>Learn to build scalable web applications with MERN stack.</p>
+                        <p class="offer">Now: 10 Rs <span class="original-price">300 Rs</span></p>
+
+                        <p class="rating">
+                            <span class="stars">
+                                &#9733;&#9733;&#9733;&#9733;&#9734; <!-- 4 stars out of 5 -->
+                            </span>
+                            <span class="enrolled">200 Enrolled</span>
+                        </p>
+                        <button class="btn buy-now" data-course-name="Full Stack Development" data-course-price="10"
+                            data-course-url="http://127.0.0.1:5502/Pages/web.html" onclick="makePayment(this)">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+                <!-- Add other course cards here -->
+
+                <div class="course-card">
+                    <div class="course-image" style="background-image: url('/images/py.jpg');"></div>
+                    <div class="course-content">
+                        <h3>Python for Beginners</h3>
+                        <p>Start your programming journey with Python.</p>
+                        <p class="offer">Now: 2000 Rs <span class="original-price">2500 Rs</span></p>
+                        <p class="rating">
+                            <span class="stars">
+                                &#9733;&#9733;&#9733;&#9733;&#9734; <!-- 5 stars out of 5 -->
+                            </span>
+                            <span class="enrolled">350 Enrolled</span>
+                        </p>
+                        <button class="btn buy-now" onclick="makePayment(2500, 'Full Stack Development')">Buy
+                            Now</button>
+                    </div>
+                </div>
+
+                <!-- Course Card 3 -->
+                <div class="course-card">
+                    <div class="course-image" style="background-image: url('/images/cy.jpg');"></div>
+                    <div class="course-content">
+                        <h3>Cybersecurity </h3>
+                        <p>Protect systems with the latest cybersecurity techniques.</p>
+                        <p class="offer">Now: 3000 Rs <span class="original-price">3500 Rs</span></p>
+                        <p class="rating">
+                            <span class="stars">
+                                &#9733;&#9733;&#9733;&#9733;&#9734; <!-- 5 stars out of 5 -->
+                            </span>
+                            <span class="enrolled">500 Enrolled</span>
+                        </p>
+                        <a href="#" class="btn buy-now">Buy Now</a>
+                    </div>
+                </div>
+
+
+                <!-- Course Card 4 -->
+                <div class="course-card">
+                    <div class="course-image" style="background-image: url('/images/da.jpg');"></div>
+                    <div class="course-content">
+                        <h3> Data Visualization </h3>
+                        <p>Create stunning visual representations of data.</p>
+                        <p class="offer">Now: 2000 Rs <span class="original-price">2500 Rs</span></p>
+                        <p class="rating">
+                            <span class="stars">
+                                &#9733;&#9733;&#9733;&#9734; <!-- 5 stars out of 5 -->
+                            </span>
+                            <span class="enrolled">300 Enrolled</span>
+                        </p>
+                        <button class="btn buy-now" onclick="makePayment(2000, 'Full Stack Development')">Buy
+                            Now</button>
+                    </div>
+                </div>
+
+
+
+
+                <!-- Course Card 2 -->
+                <div class="course-card">
+                    <div class="course-image" style="background-image: url('/images/ai.jpg');"></div>
+                    <div class="course-content">
+                        <h3> AI & ML Mastery </h3>
+                        <p> Delve into Artificial Intelligence and Machine Learning.</p>
+                        <p class="offer">Now: 2000 Rs <span class="original-price">2500 Rs</span></p>
+                        <p class="rating">
+                            <span class="stars">
+                                &#9733;&#9733;&#9733;&#9733;&#9733; <!-- 5 stars out of 5 -->
+                            </span>
+                            <span class="enrolled">250 Enrolled</span>
+                        </p>
+                        <button class="btn buy-now" onclick="makePayment(2000, 'Full Stack Development')">Buy
+                            Now</button>
+                    </div>
+                </div>
+
+                <!-- Course Card 2 -->
+                <div class="course-card">
+                    <div class="course-image" style="background-image: url('/images/ui.jpg');"></div>
+                    <div class="course-content">
+                        <h3>P UI/UX Design</h3>
+                        <p> earn design principles to create user-friendly interfaces.</p>
+                        <p class="offer">Now: 2000 Rs <span class="original-price">2500 Rs</span></p>
+                        <p class="rating">
+                            <span class="stars">
+                                &#9733;&#9733;&#9733;&#9733;&#9734; <!-- 5 stars out of 5 -->
+                            </span>
+                            <span class="enrolled">400 Enrolled</span>
+                        </p>
+                        <a href="#" class="btn buy-now">Buy Now</a>
+                    </div>
+                </div>
+    </section>
+
+
+
+
+    </div>
+    </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Find us here</h3>
+                <p>Nalanda College Of Engineering Chandi, Bihar (India)</p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Contact us</h3>
+                <p>+123456789</p>
+                <a href="mailto:carrierexpress@gmail.com" class="link">carrierexpress@gmail.com</a>
+            </div>
+            <div class="box">
+                <h3>Localization</h3>
+                <p>India</p>
+            </div>
+        </div>
+        <div class="credit">Designed with ❤️ <span>Carrier Express</span> | All rights reserved!</div>
+    </section>
+
+
+    <div class="chatbot-card" style="width: 170px; height: 170px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; border: 1px solid #ddd; padding: 0; border-radius: 10px; overflow: hidden; background-color: #fff;">
+        <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;">
+            <source src="/images/hello.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button onclick="window.location.href='https://custom-chatbot-s6by.onrender.com';" style="padding: 10px 20px; border: none; background-color: #007bff; color: white; border-radius: 5px; cursor: pointer; margin: 5px;">Start Chat</button>
+    </div>
+
+    <!-- Payment Script -->
+    <script>
+        function makePayment(amount, courseName) {
+            const options = {
+                "key": "",
+                "amount": amount * 100,
+                "currency": "INR",
+                "name": "Career Express",
+                "description": courseName,
+                "image": "/images/logo.png",
+                "handler": function (response) {
+                    alert("Payment Successful! Transaction ID: " + response.razorpay_payment_id);
+                },
+                "prefill": {
+                    "name": "Sanjit Chaudhary",
+                    "email": "csexpressway@gmail.com",
+                    "contact": "1234567890"
+                },
+                "theme": {
+                    "color": "#3399cc"
+                }
+            };
+            const paymentObject = new Razorpay(options);
+            paymentObject.open();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Placement Study Materials - CSE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #007bff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #0056b3;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 24px;
+            margin: 20px 0;
+            color: #007bff;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .card a:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .card-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Placement Study Materials - Computer Science & Engineering</h1>
+</header>
+
+<nav>
+    <a href="#java">Java</a>
+    <a href="#c">C</a>
+    <a href="#cpp">C++</a>
+    <a href="#python">Python</a>
+    <a href="#ai">AI & ML</a>
+    <a href="#interview">Interview Questions</a>
+</nav>
+
+<div class="container">
+    <section id="java">
+        <h2 class="section-title">Java</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Java Basics</h3>
+                <p>Learn the fundamentals of Java including variables, loops, and object-oriented concepts.</p>
+                <a href="https://drive.google.com/file/d/12cUyv5FX9dqbmd6cxALHxwWJ_g7zciqP/view?usp=sharing" download>Download Notes</a>
+            </div>
+            <div class="card">
+                <h3>Java Interview Questions</h3>
+                <p>Prepare for common Java interview questions with detailed answers and explanations.</p>
+                <a href="path/to/java_interview_questions.pdf" download>Download Interview Questions</a>
+            </div>
+            <div class="card">
+                <h3>Java Advanced Topics</h3>
+                <p>Explore advanced Java topics such as multithreading, Java Collections, and Lambda expressions.</p>
+                <a href="path/to/java_advanced_topics.pdf" download>Download Advanced Topics</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="c">
+        <h2 class="section-title">C Programming</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>C Basics</h3>
+                <p>Understand C syntax, functions, pointers, and memory management concepts.</p>
+                <a href="path/to/c_basics_notes.pdf" download>Download Notes</a>
+            </div>
+            <div class="card">
+                <h3>C Interview Questions</h3>
+                <p>Prepare for your C programming interviews with common questions and solutions.</p>
+                <a href="path/to/c_interview_questions.pdf" download>Download Interview Questions</a>
+            </div>
+            <div class="card">
+                <h3>Advanced C Topics</h3>
+                <p>Learn about dynamic memory allocation, file handling, and advanced data structures in C.</p>
+                <a href="path/to/c_advanced_topics.pdf" download>Download Advanced Topics</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="cpp">
+        <h2 class="section-title">C++ Programming</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>C++ Basics</h3>
+                <p>Master the basics of C++ programming including object-oriented principles, constructors, and destructors.</p>
+                <a href="path/to/cpp_basics_notes.pdf" download>Download Notes</a>
+            </div>
+            <div class="card">
+                <h3>C++ Interview Questions</h3>
+                <p>Prepare for interviews with important C++ questions and problem-solving techniques.</p>
+                <a href="path/to/cpp_interview_questions.pdf" download>Download Interview Questions</a>
+            </div>
+            <div class="card">
+                <h3>Advanced C++ Topics</h3>
+                <p>Explore advanced C++ features like templates, STL, and exception handling.</p>
+                <a href="path/to/cpp_advanced_topics.pdf" download>Download Advanced Topics</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="python">
+        <h2 class="section-title">Python</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Python Basics</h3>
+                <p>Start with Python basics, including data types, loops, functions, and modules.</p>
+                <a href="path/to/python_basics_notes.pdf" download>Download Notes</a>
+            </div>
+            <div class="card">
+                <h3>Python Interview Questions</h3>
+                <p>Prepare with a list of frequently asked Python interview questions and sample answers.</p>
+                <a href="path/to/python_interview_questions.pdf" download>Download Interview Questions</a>
+            </div>
+            <div class="card">
+                <h3>Advanced Python Topics</h3>
+                <p>Learn about Python libraries, multithreading, and asynchronous programming.</p>
+                <a href="path/to/python_advanced_topics.pdf" download>Download Advanced Topics</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="ai">
+        <h2 class="section-title">Artificial Intelligence & Machine Learning</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Introduction to AI & ML</h3>
+                <p>Get started with the basics of Artificial Intelligence and Machine Learning algorithms.</p>
+                <a href="path/to/ai_ml_intro.pdf" download>Download Notes</a>
+            </div>
+            <div class="card">
+                <h3>AI Interview Questions</h3>
+                <p>Prepare for AI interviews with questions related to neural networks, deep learning, and more.</p>
+                <a href="path/to/ai_interview_questions.pdf" download>Download Interview Questions</a>
+            </div>
+            <div class="card">
+                <h3>ML Algorithms</h3>
+                <p>Learn about popular ML algorithms like Linear Regression, Decision Trees, and SVM.</p>
+                <a href="path/to/ml_algorithms_notes.pdf" download>Download ML Algorithms</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="interview">
+        <h2 class="section-title">Interview Questions</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Technical Interview Questions</h3>
+                <p>Prepare for technical interviews with questions covering data structures, algorithms, and programming languages.</p>
+                <a href="path/to/technical_interview_questions.pdf" download>Download Interview Questions</a>
+            </div>
+            <div class="card">
+                <h3>HR Interview Questions</h3>
+                <p>Get ready for HR rounds with common HR interview questions and tips on how to answer them.</p>
+                <a href="path/to/hr_interview_questions.pdf" download>Download HR Questions</a>
+            </div>
+            <div class="card">
+                <h3>System Design Interviews</h3>
+                <p>Master system design concepts with real-world scenarios and solutions.</p>
+                <a href="path/to/system_design_interview.pdf" download>Download System Design</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Footer Section -->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Find us here</h3>
+            <p>Nalanda College Of Engineering Chandi,Bihar(India)</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+        <div class="box">
+            <h3>Contact us</h3>
+            <p>+123456789</p>
+            <a href="mailto:carrierexpress" class="link">csexpressway@gmail.com</a>
+        </div>
+        <div class="box">
+            <h3>Localization</h3>
+            <p> India</p>
+        </div>
+    </div>
+    <div class="credit">Created by <span>CS Express Way </span> | All rights reserved!</div>
+</section>
+
+</body>
+</html>

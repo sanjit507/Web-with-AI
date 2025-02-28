@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Provider Companies</title>
+  <style>
+    /* General Styles */
+    :root {
+      --primary-color: #4CAF50;
+      --secondary-color: #45a049;
+      --background-light: #f4f4f9;
+      --background-dark: #1a1a1a;
+      --text-light: #333;
+      --text-dark: #f4f4f9;
+      --card-light: #fff;
+      --card-dark: #2d2d2d;
+      --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background-light);
+      color: var(--text-light);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    body.dark-mode {
+      background-color: var(--background-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: var(--card-light);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      transition: background-color 0.3s ease;
+    }
+
+    body.dark-mode .container {
+      background-color: var(--card-dark);
+    }
+
+    .search-bar {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .search-bar input {
+      flex: 1;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    }
+
+    body.dark-mode .search-bar input {
+      background-color: #444;
+      color: var(--text-dark);
+      border-color: #555;
+    }
+
+    .search-bar input:focus {
+      border-color: var(--primary-color);
+      outline: none;
+    }
+
+    .company {
+      border-bottom: 1px solid #ddd;
+      padding: 1.5rem 0;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    body.dark-mode .company {
+      border-color: #444;
+    }
+
+    .company:hover {
+      background-color: #f9f9f9;
+      transform: translateY(-5px);
+    }
+
+    body.dark-mode .company:hover {
+      background-color: #3d3d3d;
+    }
+
+    .company:last-child {
+      border-bottom: none;
+    }
+
+    .company h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.5rem;
+      color: var(--primary-color);
+    }
+
+    .company p {
+      margin: 0;
+      color: #666;
+    }
+
+    body.dark-mode .company p {
+      color: #bbb;
+    }
+
+    .company a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .company a:hover {
+      color: var(--secondary-color);
+    }
+
+    .company a::after {
+      content: ' →';
+      transition: transform 0.3s ease;
+    }
+
+    .company a:hover::after {
+      transform: translateX(5px);
+    }
+
+    /* Dark Mode Toggle */
+    .dark-mode-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .dark-mode-toggle:hover {
+      background-color: var(--secondary-color);
+    }
+
+    /* Loading Animation */
+    .loading {
+      display: none;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      color: var(--primary-color);
+    }
+
+    .loading::after {
+      content: '';
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      border: 2px solid var(--primary-color);
+      border-top: 2px solid transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Job Provider Companies</h1>
+  </header>
+
+  <a href="https://drive.google.com/file/d/1L-ciyLHo-GKiSyhtiQVWH8beLeb8tI1k/view?usp=sharing" target="_blank" class="dark-mode-toggle">
+    🧾 PDF
+  </a>
+
+  <div class="container">
+    <div class="search-bar">
+      <input type="text" id="search-name" placeholder="Search by name..." onkeyup="filterCompanies()">
+      <input type="text" id="search-location" placeholder="Search by location..." onkeyup="filterCompanies()">
+    </div>
+
+    <div id="company-list">
+      <div class="company">
+        <h3>TCS</h3>
+        <p>Location: Global</p>
+        <a href="https://www.tcs.com/" target="_blank">More Details</a>
+      </div>
+      <div class="company">
+        <h3>Wipro</h3>
+        <p>Location: Global</p>
+        <a href="https://www.wipro.com/" target="_blank">More Details</a>
+      </div>
+      <div class="company">
+        <h3>Google</h3>
+        <p>Location: Global</p>
+        <a href="https://www.google.com/careers/" target="_blank">More Details</a>
+      </div>
+      <div class="company">
+        <h3>Microsoft</h3>
+        <p>Location: Global</p>
+        <a href="https://careers.microsoft.com/" target="_blank">More Details</a>
+      </div>
+      <div class="company">
+        <h3>Scalar</h3>
+        <p>Location: Global</p>
+        <a href="https://www.scalar.com/" target="_blank">More Details</a>
+      </div>
+      <div class="company">
+        <h3>Facebook</h3>
+        <p>Location: Global</p>
+        <a href="https://www.facebook.com/careers/" target="_blank">More Details</a>
+      </div>
+      <div class="company">
+        <h3>CTS</h3>
+        <p>Location: Global</p>
+        <a href="https://www.cognizant.com/" target="_blank">More Details</a>
+      </div>
+      <div class="company">
+        <h3>Infosys</h3>
+        <p>Location: Global</p>
+        <a href="https://www.infosys.com/" target="_blank">More Details</a>
+      </div>
+      <div class="company">
+        <h3>Mindtree</h3>
+        <p>Location: Global</p>
+        <a href="https://www.mindtree.com/" target="_blank">More Details</a>
+      </div>
+      <div class="company">
+        <h3>Mphasis</h3>
+        <p>Location: Global</p>
+        <a href="https://www.mphasis.com/" target="_blank">More Details</a>
+      </div>
+    </div>
+
+    <div class="loading" id="loading">Loading...</div>
+  </div>
+
+  <script>
+    // Filter Companies
+    function filterCompanies() {
+      const nameQuery = document.getElementById('search-name').value.toLowerCase();
+      const locationQuery = document.getElementById('search-location').value.toLowerCase();
+      const companies = document.querySelectorAll('.company');
+
+      companies.forEach(company => {
+        const name = company.querySelector('h3').textContent.toLowerCase();
+        const location = company.querySelector('p').textContent.toLowerCase();
+
+        if ((name.includes(nameQuery) || nameQuery === "") &&
+            (location.includes(locationQuery) || locationQuery === "")) {
+          company.style.display = '';
+        } else {
+          company.style.display = 'none';
+        }
+      });
+    }
+
+    
+
+    // Simulate Loading
+    setTimeout(() => {
+      document.getElementById('loading').style.display = 'none';
+    }, 2000); // Simulate 2 seconds loading time
+  </script>
+</body>
+</html>

@@ -1,0 +1,628 @@
+
+
+
+/* Header styling */
+header {
+    background-color: rgb(44, 62, 80);
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden; /* To make sure the flying elements stay within the header */
+  }
+  
+  /* H2 styling */
+  h2 {
+    font-size: 2.5em;
+    color: white;
+    margin: 0;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    position: relative;
+    animation: fadeIn 2s ease-out;
+    z-index: 2;
+   
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Blinking effect for the icon */
+  .blink {
+    animation: blink 1s infinite;
+    
+  }
+  
+  /* Blink animation */
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Glow effect for the title */
+  h2 span {
+    color: #FFD700;
+    text-shadow: 0 0 15px #FFD700, 0 0 30px #FF6347, 0 0 45px #FF6347;
+  }
+  
+  /* Hover effect on the header */
+  h2:hover {
+    color: #FF4081;
+    text-shadow: 0 0 20px #ff4081, 0 0 30px #ff4081, 0 0 50px #ff4081;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Flying Birds / Butterflies Effect */
+  @keyframes flyButterfly {
+    0% {
+      transform: translateY(0) translateX(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-100px) translateX(100px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0) translateX(200px);
+      opacity: 0;
+    }
+  }
+  
+
+
+
+
+  /* New Updates */
+.announcement {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white; /* Creates a caret effect */
+  animation: typing 8s steps(20) infinite, blink-caret 0.90s step-end infinite; /* Infinite typing and blinking */
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: white; /* Set text color to white */
+  margin-left: 200px;
+  width: max-content; /* Ensures the element expands based on content */
+  position: relative; /* Required for caret position */
+  z-index: 1; /* Ensures text is above background elements */
+  text-transform: uppercase; /* Makes the text all uppercase */
+  font-family: 'Arial', sans-serif; /* Modern font for text */
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  background: linear-gradient(90deg, #ff0080, #ff8c00); /* Gradient background */
+  background-clip: text; /* Applies gradient to text only */
+  -webkit-background-clip: text; /* Webkit support for gradient text */
+}
+
+/* Hover effect */
+.announcement:hover {
+  color: #f0f0f0; /* Lighter color on hover */
+  transform: scale(1.1); /* Slightly increase size for emphasis */
+}
+
+/* Vibrate effect on hover */
+.announcement:hover {
+  animation: vibrate 0.2s linear infinite; /* Apply vibration effect */
+}
+
+/* Text shadow effect */
+.announcement span {
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4); /* Light shadow effect */
+  transition: text-shadow 0.3s ease; /* Smooth transition for shadow */
+}
+
+/* Glowing effect on hover */
+.announcement:hover span {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.5);
+}
+
+/* Vibrate animation for hover effect */
+@keyframes vibrate {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-3px);
+  }
+  40% {
+    transform: translateX(3px);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+  80% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Typewriter animation */
+@keyframes typing {
+  0% {
+    width: 0; /* Start with no text */
+  }
+  100% {
+    width: 100%; /* Expand to full width when all text is typed */
+  }
+}
+
+/* Blinking caret animation */
+@keyframes blink-caret {
+  0% {
+    border-color: white; /* Visible at the beginning */
+  }
+  50% {
+    border-color: transparent; /* Makes the caret disappear */
+  }
+  100% {
+    border-color: white; /* Makes the caret appear again */
+  }
+}
+
+/* Mobile-Friendly Adjustments */
+@media screen and (max-width: 768px) {
+  .announcement {
+    font-size: 5px; /* Reduce font size for tablets */
+    margin-left: 60px; /* Adjust margin for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .announcement {
+    font-size: 5px; /* Further reduce font size for small mobile screens */
+    margin-right: 60px; /* Adjust margin for very small screens */
+  }
+}
+
+
+/* Sidebar Styles */
+.navbar {
+    position: fixed;
+    top: 4rem; /* Slightly adjusted for better alignment */
+    left: 0;
+    bottom: 0;
+    width: 5rem; /* Collapsed width */
+    background: linear-gradient(145deg, #2c3e50, #34495e); /* Gradient background */
+    color: white;
+    transition: width 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    padding-top: 2rem;
+    border-radius: 0 1rem 1rem 0;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 1000;
+  }
+  
+  .navbar.active {
+    width: 18rem; /* Expanded width */
+    box-shadow: 6px 0 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(145deg, #34495e, #2c3e50); /* Subtle color switch */
+  }
+  
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar ul li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.2rem;
+    margin: 0.5rem 0;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+    border-radius: 0 2rem 2rem 0;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .navbar ul li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 0 2rem 2rem 0;
+  }
+  
+  .navbar ul li:hover::before {
+    transform: scaleY(1);
+  }
+  
+  .navbar ul li:hover {
+    background-color: #1abc9c;
+    transform: translateX(10px); /* Slide effect */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 1rem;
+  }
+  
+  .navbar ul li .icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #ffffff;
+    transition: transform 0.3s, color 0.3s ease-in-out;
+  }
+  
+  .navbar ul li:hover .icon {
+    transform: scale(1.2);
+    color: white;
+  }
+  
+  .navbar ul li .title {
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateX(-15px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    white-space: nowrap;
+  }
+  
+  .navbar.active ul li .title {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Toggle Button Styles */
+  .toggle {
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1100;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .toggle:hover {
+    transform: rotate(10deg); /* Subtle rotation on hover */
+    background-color: #f8f9fa;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .toggle ion-icon {
+    font-size: 1rem;
+  }
+  
+  .toggle .close {
+    display: none;
+  }
+  
+  .navbar.active ~ .toggle .close {
+    display: block;
+  }
+  
+  .toggle .menu {
+    display: block;
+  }
+  
+  .navbar.active ~ .toggle .menu {
+    display: none;
+  }
+  
+  /* Animation for Sidebar Items */
+  @keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+  
+  .navbar.active ul li {
+    animation: fadeInSlide 0.6s ease-in-out;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar {
+        width: 4rem;
+    }
+  
+    .navbar.active {
+        width: 15rem;
+    }
+  
+    .toggle {
+        top: 1rem;
+        left: 1rem;
+        width: 4rem;
+        height: 4rem;
+    }
+  
+    .navbar ul li {
+        padding: 0.9rem;
+    }
+  
+    .navbar ul li .title {
+        font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar {
+        width: 3.5rem;
+    }
+  
+    .navbar.active {
+        width: 12rem;
+    }
+  
+    .toggle {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+  
+    .navbar ul li {
+        padding: 0.8rem;
+    }
+  
+    .navbar ul li .title {
+        font-size: 0.9rem;
+    }
+  }
+  
+  
+  
+  html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    background-color: #000000;
+}
+
+
+
+
+
+
+
+/* Footer Styles */
+.footer {
+    padding: 4rem 2rem;               /* Add padding inside the footer */
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Add gradient background */
+    color: white;                     /* Text color */
+    text-align: center;               /* Center-align the text */
+    width: 100%;                      /* Ensure the footer spans the full width */
+    position: relative;               /* Position relative for inner elements */
+    box-sizing: border-box;           /* Prevent overflow */
+    margin: 0;                        /* Remove default margin */
+    display: block;                   /* Ensure it behaves like a block element */
+    border-top: 4px solid #3498db;    /* Add a stylish top border */
+    font-family: 'Poppins', sans-serif; /* Add a modern font */
+    overflow: hidden;                 /* Prevent any overflow issues */
+  }
+  
+  /* Footer Decorative Elements */
+  .footer::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 5px;
+    background: #3498db;
+    border-radius: 50%;
+    opacity: 0.8;
+  }
+  
+  /* Footer Box Container */
+  .footer .box-container {
+    display: flex;
+    justify-content: space-between;   /* Distribute space evenly */
+    width: 100%;                      /* Ensure container takes full width */
+    max-width: 1300px;                /* Increase max width */
+    margin: 0 auto;                   /* Center the container horizontally */
+    gap: 2rem;                        /* Space between the boxes */
+    flex-wrap: wrap;                  /* Allow wrapping of content */
+    box-sizing: border-box;           /* Prevent overflow */
+    align-items: flex-start;          /* Align items at the top */
+    animation: fadeInUp 1s ease-in-out; /* Add entrance animation */
+  }
+  
+  /* Footer Box Styling */
+  .footer .box {
+    width: 28%;                       /* Slightly reduce width for better spacing */
+    padding: 20px;                    /* Padding inside each box */
+    box-sizing: border-box;           /* Prevent overflow */
+    margin-bottom: 2rem;              /* Margin below the boxes */
+    background: rgba(52, 73, 94, 0.9);/* Semi-transparent background */
+    border-radius: 12px;              /* Increase corner rounding */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .footer .box:hover {
+    transform: translateY(-5px);      /* Slightly lift on hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); /* Deeper shadow on hover */
+  }
+  
+  /* Footer Box Title Styling */
+  .footer .box h3 {
+    font-size: 1.8rem;                /* Slightly larger title size */
+    color: #ecf0f1;                   /* Light color for the title */
+    margin-bottom: 1.2rem;            /* Increase space below the title */
+    border-bottom: 3px solid #3498db; /* Thicker underline for title */
+    padding-bottom: 0.6rem;
+    text-align: left;  
+    margin-left: 20px;               /* Align titles to the left */
+    text-transform: uppercase;        /* Capitalize titles */
+  }
+  
+  /* Footer Text Styling */
+  .footer .box p {
+    font-size: 1rem;                  /* Text size */
+    line-height: 1.8;                 /* Improve readability */
+    color: #bdc3c7;                   /* Subtle text color */
+    margin: 0.5rem 0;                 /* Space between paragraphs */
+    text-align: left; 
+    margin-left: 20px;                /* Align text to the left */
+  }
+  
+  /* Social Media Links Styling */
+  .footer .share {
+    margin-top: 2rem;
+  }
+  
+  .footer .share a {
+    margin: 0 1rem;                   /* Horizontal space between icons */
+    font-size: 2rem;                  /* Icon size */
+    color: white;                     /* Icon color */
+    text-decoration: none;            /* Remove underline */
+    display: inline-block;            /* Block layout for better hover effects */
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .footer .share a:hover {
+    color: #e67e22;                   /* Change color on hover */
+    transform: scale(1.2);            /* Increase size on hover */
+  }
+  
+  /* Footer Links Styling */
+  .footer .link {
+    text-decoration: none;            /* Remove link underline */
+    color: #3498db;                   /* Link color */
+    font-weight: bold;                /* Emphasize links */
+    transition: color 0.3s ease;      /* Smooth hover effect */
+  }
+  
+  .footer .link:hover {
+    color: #1abc9c;                   /* Change color on hover */
+    text-decoration: underline;       /* Add underline on hover */
+  }
+  
+  /* Newsletter Subscription */
+  .footer .newsletter {
+    margin-top: 2rem;
+    text-align: left;
+  }
+  
+  .footer .newsletter input[type="email"] {
+    width: 75%;                       /* Input field width */
+    padding: 12px;                    /* Increased padding */
+    border: 2px solid #3498db;        /* Border styling */
+    border-radius: 6px;               /* Rounded corners */
+    outline: none;                    /* Remove outline */
+    font-size: 1rem;                  /* Font size */
+    margin-right: 1rem;               /* Space after input */
+  }
+  
+  .footer .newsletter button {
+    padding: 12px 24px;               /* Increased button padding */
+    background-color: #3498db;        /* Button background */
+    color: white;                     /* Button text color */
+    border: none;                     /* Remove border */
+    border-radius: 6px;               /* Rounded corners */
+    cursor: pointer;                  /* Pointer cursor */
+    font-size: 1rem;                  /* Font size */
+    font-weight: bold;                /* Emphasize button text */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .footer .newsletter button:hover {
+    background-color: #1abc9c;        /* Change background on hover */
+    transform: translateY(-2px);      /* Slight lift on hover */
+  }
+  
+  /* Credit Styling */
+  .footer .credit {
+    margin-top: 3rem;  
+    font-size: 0.9rem;  
+    text-align: center;  
+    width: 100%;  
+    padding-top: 1rem;
+    border-top: 1px solid #bdc3c7;    /* Add a top border */
+    color: #bdc3c7;                   /* Subtle text color */
+    letter-spacing: 1px;              /* Space out letters slightly */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 1024px) {
+    .footer .box-container {
+        gap: 1.5rem;                  /* Reduce gap between boxes */
+    }
+  
+    .footer .box {
+        width: 45%;                   /* Adjust width for medium screens */
+    }
+  
+    .footer .newsletter input[type="email"] {
+        width: 70%;                   /* Adjust input width */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer .box-container {
+        flex-direction: column;       /* Stack the boxes vertically */
+        align-items: center;          /* Center-align the boxes */
+    }
+  
+    .footer .box {
+        width: 90%;                   /* Increase box width for small screens */
+    }
+  
+    .footer .newsletter input[type="email"] {
+        width: 100%;                  /* Full width for input on smaller screens */
+        margin-bottom: 1rem;          /* Add spacing below input */
+    }
+  
+    .footer .newsletter button {
+        width: 100%;                  /* Full width for button */
+    }
+  }
+  
+  /* Keyframe Animation */
+  @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  

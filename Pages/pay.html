@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Sanjit Kumar Mentorship</title>
+    <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Payment for Your Mentorship Session</h1>
+            <p>Complete your booking by providing payment details</p>
+        </div>
+    </header>
+
+    <section class="payment-details">
+        <div class="container">
+            <h2>Booking Details</h2>
+            <p><strong>Date:</strong> <span id="payment-date"></span></p>
+            <p><strong>Time:</strong> <span id="payment-time"></span></p>
+            <p><strong>Duration:</strong> <span id="payment-duration"></span> minutes</p>
+            <p><strong>Total Price:</strong> ₹<span id="payment-price"></span></p>
+
+            <form id="payment-form">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="card">Card Details:</label>
+                    <input type="text" id="card" name="card" placeholder="Card Number" required>
+                </div>
+                <div class="form-group">
+                    <label for="expiry">Expiry Date:</label>
+                    <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                </div>
+                <button type="submit">Pay  <span id="payment-amount"></span></button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>For inquiries, contact: <a href="mailto:carrierexpress@gmail.com">carrierexpress@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Get the booking details from URL query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const date = urlParams.get('date');
+        const time = urlParams.get('time');
+        const duration = urlParams.get('duration');
+        const price = urlParams.get('price');
+
+        // Display the booking details on the payment page
+        document.getElementById('payment-date').textContent = date;
+        document.getElementById('payment-time').textContent = time;
+        document.getElementById('payment-duration').textContent = duration;
+        document.getElementById('payment-price').textContent = price;
+        document.getElementById('payment-amount').textContent = price;
+
+        // Handle form submission
+        document.getElementById('payment-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission to simulate payment processing
+
+            // Collect payment information
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const card = document.getElementById('card').value;
+            const expiry = document.getElementById('expiry').value;
+            const cvv = document.getElementById('cvv').value;
+
+            // Here you can add actual payment gateway integration (e.g., Stripe, Razorpay)
+            alert(`Payment of ₹${price} successful for ${name}. You will receive a confirmation email at ${email}.`);
+
+            // Redirect or show confirmation message
+            window.location.href = "thankyou.html"; // Redirect to a thank you page (create it)
+        });
+    </script>
+
+</body>
+</html>

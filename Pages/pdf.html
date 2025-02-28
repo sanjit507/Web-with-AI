@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PDF Tools - All in One</title>
+  <link rel="stylesheet" href="/style.css"> 
+
+  
+  
+  <!-- Font Awesome Link for Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <style>
+    /* Basic Reset and Global Styles */
+   
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header Styling */
+    header {
+      background: linear-gradient(to right, #1e88e5, #1976d2);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.6rem;
+    }
+
+    .online-status {
+      font-size: 1.5rem;
+      color: #4caf50;
+      margin-top: 1rem;
+    }
+
+    /* Main Section Styling */
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #333;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* Tool Cards Grid */
+    .tools-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .tool-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      padding: 2.5rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .tool-card h3 {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 1.2rem;
+    }
+
+    .tool-card p {
+      font-size: 1.4rem;
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+
+    .tool-card a {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background-color: #1e88e5;
+      color: white;
+      font-size: 1.4rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tool-card a::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300%;
+      height: 300%;
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.3s ease;
+      border-radius: 50%;
+    }
+
+    .tool-card a:hover {
+      background-color: #0d47a1;
+      transform: translateY(-2px);
+    }
+
+    .tool-card a:hover::after {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Every Tool You Need for Students </h1>
+    <p>All-in-one platform for handling PDFs and Images - 100% FREE and easy to use!</p>
+    <!-- Online Status Icon -->
+    <div class="online-status">
+      <i class="fas fa-circle"></i> <strong>Online</strong>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <section>
+    <h2> Tools</h2>
+    <div class="tools-container">
+      <div class="tool-card">
+        <h3> Image Size Reduce  </h3>
+        <p> To reduce an image size, you can compress the image without significantly losing quality.</p>
+        <a href="https://ephemeral-dieffenbachia-2b2f15.netlify.app/">Try it Now</a>
+      </div>
+
+
+      <div class="tool-card">
+        <h3> PNG to JPEG  </h3>
+        <p> Converting a PNG to JPEG </p>
+        <a href="#">Try it Now</a>
+      </div>
+
+
+
+     
+    </div>
+  </section>
+
+  <!-- Footer -->
+<!-- Footer Section -->
+<section class="footer">
+  <div class="box-container">
+      <div class="box">
+          <h3>Find us here</h3>
+          <p>Nalanda College Of Engineering Chandi,Bihar(India)</p>
+          <div class="share">
+              <a href="#" class="fab fa-facebook-f"></a>
+              <a href="#" class="fab fa-twitter"></a>
+              <a href="#" class="fab fa-instagram"></a>
+              <a href="#" class="fab fa-linkedin"></a>
+          </div>
+      </div>
+      <div class="box">
+          <h3>Contact us</h3>
+          <p>+123456789</p>
+          <a href="mailto:carrierexpress" class="link">csexpressway@gmail.com</a>
+      </div>
+      <div class="box">
+          <h3>Localization</h3>
+          <p> India</p>
+      </div>
+  </div>
+  <div class="credit">Created by <span>CS Express Way </span> | All rights reserved!</div>
+</section>
+
+</body>
+</html>

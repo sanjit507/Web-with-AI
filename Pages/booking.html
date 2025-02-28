@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentorship Services - Sanjit Kumar</title>
+    <link rel="stylesheet" href="styles.css">
+    <img src="/images/team-1.png" alt="Topmate Logo" class="shadow-animate">
+
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Sanjit Kumar - Full Stack Web Developer & Mentor</h1>
+            <p>Providing Expert Mentorship in Web Development, SEO, Machine Learning & Data Science</p>
+        </div>
+    </header>
+
+    <section class="profile">
+        <div class="container">
+            
+            <h2>Sanjit Kumar - Mentor</h2>
+            <p>I am Sanjit Kumar, a Full Stack Web Developer with over 2 years of experience specializing in WordPress. I also have a strong background in SEO content writing, machine learning, and data science. I offer personalized mentorship to help you succeed in these fields.</p>
+        </div>
+    </section>
+
+    <section class="booking">
+        <div class="container">
+            <h3>Book Your Mock Interview or Mentorship Session</h3>
+            <p><strong> Minimum Price:</strong> ₹ <span id="base-price">299</span></p>
+
+            <div class="duration-selection">
+                <label for="duration">Select Meeting Duration:</label>
+                <select id="duration">
+                    
+                    <option value="60">1 hour</option>
+                    <option value="90">1.5 hours</option>
+                    <option value="120">2 hours</option>
+                    <option value="150">2.5 hours</option>
+                    <option value="180">3 hours</option>
+                </select>
+                <div id="updated-price">
+                    <label for="price">Updated Plan ₹ <span id="price">299</span></label>
+                </div>
+            </div>
+
+            <div class="time-selection">
+                <label for="time">Select Date and Time:</label>
+                <input type="date" id="meeting-date">
+                <select id="meeting-time">
+                    <option value="09:00 AM">09:00 AM</option>
+                    <option value="09:30 AM">09:30 AM</option>
+                    <option value="10:00 AM">10:00 AM</option>
+                    <option value="10:30 AM">10:30 AM</option>
+                    <option value="11:00 AM">11:00 AM</option>
+                    <!-- Add other time slots as needed -->
+                </select>
+            </div>
+
+         
+            <a href="/Pages/pay.html" class="apply-btn">Book Now</a>
+                    </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>For inquiries, contact: <a href="mailto:carrierexpress@gmail.com">carrierexpress@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Price update function based on duration
+        function updatePrice() {
+            const duration = parseInt(document.getElementById("duration").value);
+            let price = 299; // Default price for 30 minutes
+
+            // Adjust price based on duration
+            if (duration === 60) {
+                price = 299; // 1 hour
+            } else if (duration === 90) {
+                price = 399; // 1.5 hours
+            } else if (duration === 120) {
+                price = 499; // 2 hours
+            } else if (duration === 150) {
+                price = 549; // 2.5 hours
+            } else if (duration === 180) {
+                price = 599; // 3 hours
+            }
+
+            document.getElementById("price").textContent = price;
+        }
+
+        // Event listener for duration change
+        document.getElementById("duration").addEventListener("change", updatePrice);
+
+        // Handle Book Now button click
+        document.getElementById("book-now-btn").addEventListener("click", function () {
+            const date = document.getElementById("meeting-date").value;
+            const time = document.getElementById("meeting-time").value;
+            const duration = document.getElementById("duration").value;
+            const price = document.getElementById("price").textContent;
+
+            if (date && time) {
+                alert(`You have successfully booked a mentorship session for ${duration} minutes on ${date} at ${time}. Total Price: ₹${price}`);
+                // You can replace this alert with actual email sending or form submission logic
+            } else {
+                alert("Please select a valid date and time.");
+            }
+        });
+
+        // Initial price setup
+        updatePrice();
+    </script>
+    
+
+</body>
+</html>

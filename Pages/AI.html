@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="head.css">
+    <title>Blog</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+ 
+
+
+
+
+    </head>
+        <header>
+            <h2><span class="blink">♨️</span> CS Express Way</h2>
+            <div class="butterfly">  
+                 <♡>👨🏻‍💻♨ ⚛</> </div>
+
+
+<style>
+/* Features Section */
+.features {
+    padding: 5rem 10%;
+    background-color: #ffffff;
+}
+
+.features h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.feature-card p {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 1.5rem;
+}
+
+.try-now-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #bd18b4;
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.try-now-button:hover {
+    background-color: #8a158b;
+}
+
+/* About Section */
+.about {
+    background-color: #f9f9f9;
+    padding: 4rem 10%;
+    text-align: center;
+}
+
+.about p {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    background-color: #bd18b4;
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #8a158b;
+}
+
+/* General icon size adjustment */
+
+</style> 
+
+
+    <!-- Sidebar Navigation -->
+    <div class="navbar">
+        <ul>
+            <!-- Search Menu -->
+            <li class="list">
+                <div class="search-menu">
+                    <input type="text" id="search" placeholder="Search...🔍" />
+    
+                </div>
+            </li>
+    
+            <!-- Home Link (now below Search) -->
+            <li class="list active">
+                <a href="/index.html"><span class="icon"><ion-icon name="home"></ion-icon></span> <span
+                        class="title">Home</span></a>
+            </li>
+    
+            <!-- AI Support Link -->
+            <li class="list">
+                <a href="/Pages/AI.html"><span class="icon"><ion-icon name="chatbubbles"></ion-icon></span> <span
+                        class="title">AI Support</span></a>
+            </li>
+    
+            <!-- Join More Info Link -->
+            <li class="list">
+                <a href="https://whatsapp.com/channel/0029VaQyxX3Chq6PbmfZqf3G"><span class="icon"><ion-icon
+                            name="chatbubbles"></ion-icon></span> <span class="title">Join More Info.</span></a>
+            </li>
+    
+            <!-- E-Store Link -->
+            <li class="list">
+                <a href="/Pages/Book.html"><span class="icon"><ion-icon name="analytics"></ion-icon></span> <span
+                        class="title">E-Store</span></a>
+            </li>
+    
+            <!-- Images Tools Link -->
+            <li class="list">
+                <a href="/Pages/pdf.html"><span class="icon"><ion-icon name="cog"></ion-icon></span> <span
+                        class="title">Images Tools</span></a>
+            </li>
+    
+            <!-- MCQs Link -->
+            <li class="list">
+                <a href="https://csestudy247.com/computer-science-mcqs"><span class="icon"><ion-icon
+                            name="cog"></ion-icon></span> <span class="title">MCQs</span></a>
+            </li>
+    
+            <!-- Test Series Link -->
+            <li class="list">
+                <a href="Pages/test.html"><span class="icon"><ion-icon name="cog"></ion-icon></span> <span
+                        class="title">Test Series</span></a>
+            </li>
+    
+            <!-- Project Code Link -->
+            <li class="list">
+                <a href="Pages/propaid.html"><span class="icon"><ion-icon
+                            name="help-circle-outline"></ion-icon></span> <span class="title">Project
+                        Code</span></a>
+            </li>
+    
+            <!-- Login Link -->
+            <li class="list">
+                <a href="http://localhost/Carrier%20Express/login/index.php"><span class="icon"><ion-icon
+                            name="person"></ion-icon></span> <span class="title">Login</span></a>
+            </li>
+    
+            <!-- Blog Link -->
+            <li class="list">
+                <a href="/Pages/blog.html"><span class="icon"><ion-icon name="log-out"></ion-icon></span> <span
+                        class="title">Our blog</span></a>
+            </li>
+        </ul>
+    </div>
+    
+    <script>
+        function searchFunction() {
+            let query = document.getElementById('search').value;
+            // Add logic for search, like redirecting to a search results page or showing filtered content
+            alert('Searching for: ' + query);
+        }
+    </script>
+    
+    
+    <!-- Toggle Button for Sidebar -->
+    <div class="toggle">
+        <ion-icon name="menu" class="open"></ion-icon>
+        <ion-icon name="close" class="close"></ion-icon>
+    </div>
+    </header>
+    
+    
+    
+        <!-- Video Section -->
+    <section id="video-section" class="video-section">
+        <div class="container">
+            <h2 data-aos="fade-up" data-aos-duration="1000"> </h2>
+        </div>
+    
+        <!-- Full-Screen Background Video -->
+        <div class="video-background">
+            <video autoplay loop muted class="background-video">
+                <source src="/images/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+
+
+
+
+
+
+ <!-- Features Section -->
+ <section id="features" class="features">
+    <div class="container">
+        <h2 data-aos="fade-up" data-aos-duration="1000">Our AI Support</h2>
+        <div class="feature-cards">
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                <h3>Course Recommendation </h3>
+                <p>A Course Recommendation System is an AI-driven tool designed to help learners discover relevant courses.</p>
+                <a href="https://course-recommendation-systems.onrender.com" class="try-now-button">Try Now</a>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <h3>Text To Image  Generation</h3>
+                <p>Text-to-Image Generation is an AI technology that creates images from textual descriptions.</p>
+                <a href="https://text2imagegenai.netlify.app/" class="try-now-button">Try Now</a>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000">
+                <h3>Book Recommendation </h3>
+                <p>A Book Recommendation System uses algorithms to suggest books.</p>
+                <a href="https://book-recommendation-system-v70n.onrender.com" class="try-now-button">Try Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <p data-aos="fade-up" data-aos-duration="1200">  We provide AI-driven solutions that empower businesses, improve customer experiences, and optimize processes.</p>
+        <a href="#contact" class="cta-button" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">Contact Us</a>
+    </div>
+</section>
+
+
+
+  
+
+<!-- Footer Section -->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Find us here</h3>
+            <p>Nalanda College Of Engineering Chandi,Bihar(India)</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+        <div class="box">
+            <h3>Contact us</h3>
+            <p>+123456789</p>
+            <a href="mailto:carrierexpress" class="link">csexpressway@gmail.com</a>
+        </div>
+        <div class="box">
+            <h3>Localization</h3>
+            <p> India</p>
+        </div>
+    </div>
+    <div class="credit">Designed with ❤️ <span>CS Express Way </span> | All rights reserved!</div>
+</section>
+
+<script src="/script.js"></script>
+</body>
+</html>
